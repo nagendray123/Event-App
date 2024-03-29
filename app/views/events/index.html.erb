@@ -1,0 +1,41 @@
+<div>
+	<h1>List of Events</h1>
+	<%= link_to "New Event", new_event_path %>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Event Name</th>
+				<td>&nbsp;</td>
+				<th>Event Description</th>
+				<td>&nbsp;</td>
+				<th>Event Date</th>
+				<td>&nbsp;</td>
+				<th>Event Time</th>
+				<td>&nbsp;</td>
+				<th>Event Location</th>
+				<td>&nbsp;</td>
+
+				<th colspan="3">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @events.each do |event| %>
+			  <tr>
+			  	<td><%= event.event_name %></td>
+			  	<td>&nbsp;</td>
+			  	<td><%= event.event_description %></td>
+			  	<td>&nbsp;</td>
+			  	<td><%= event.date %></td>
+			  	<td>&nbsp;</td>
+			  	<td><%= event.time %></td>
+			  	<td>&nbsp;</td>
+			  	<td><%= event.location %></td>
+                <td>&nbsp;</td>
+
+			  	<td><%= link_to "View", event %></td>
+			  </tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

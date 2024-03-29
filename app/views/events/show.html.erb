@@ -1,0 +1,13 @@
+<h3>Student Details</h3>
+
+  <p><strong>Event Name: <%= @event.event_name %></strong></p>
+  <p><strong>Event Description: <%= @event.event_description %></strong></p>
+  <p><strong>Event Date: <%= @event.date %></strong></p>
+  <p><strong>Event Time: <%= @event.time %></strong></p>
+  <p><strong>Event Location: <%= @event.location %></strong></p>
+  
+  <%= link_to "Back", root_path %>
+  <td>&nbsp;</td>
+  <%= link_to "Edit", edit_event_path(@event) %>
+  <td>&nbsp;</td>
+  <td><%= link_to "Delete",event_path(@event), data:{turbo_method: :delete, turbo_confirm: "Are you sure"}%></td>
